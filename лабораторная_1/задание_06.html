@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="in_a"></input>	
+        <input id="in_b"></input>			
+		<input onclick="work()" type="button" value="Работай!"></input>
+		
+		<div style="font-family:monospace;white-space:pre" id="out">
+		</div><br/>
+		
+		
+		<script>
+		function work(){	
+		var inA = document.getElementById("in_a");
+		var a = inA.value;
+		var inB = document.getElementById("in_b");
+		var b = inB.value;
+		var out = document.getElementById("out");	
+		out.innerHTML="Меня зовут " + b +", " + a +" " + b;
+		
+		
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		
+		<input onclick="work()" type="button" value="Работай!"></input>
+		
+		<div style="font-family:monospace;white-space:pre" id="out">
+		</div><br/>
+		
+		<select id="selectvalue">
+ 
+<option>трудности</option>
+ 
+<option>загадки</option>
+ 
+<option>сложные задачи</option>
+ 
+ 
+</select>
+		
+		
+		<script>
+	
+		function work(){	
+		var a = inA.options[inA.selectedIndex].value;
+		var selectvalue.selectedIndex = document.getElementById("selectvalue");	
+		selectvalue.innerHTML=selectvalue + " нас не остановят";
+		
+		}
+		</script>
+	</body>
+</html>
