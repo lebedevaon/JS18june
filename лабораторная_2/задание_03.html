@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="in_a"></input> 
+		<input onclick="work()" type="button" value="Работай!"></input>
+		
+		<div style="font-family:monospace;white-space:pre" id="out">
+		</div>
+		
+		<script>
+		function work () {
+		var inA = document.getElementById("in_a");
+		var a = parseFloat (inA.value);
+		var result;
+		result= a + 7;
+		var out = document.getElementById("out");	
+		out.innerHTML=result.toFixed(4);
+		
+				
+		}
+		
+		
+
+		</script>
+	</body>
+</html>
