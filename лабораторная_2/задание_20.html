@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="in_a"></input> 
+		<input id="in_b"></input> 
+		<input onclick="work()" type="button" value="Считать">
+		
+		<div style="font-family:monospace;white-space:pre" id="out">
+		</div>
+		
+		<script>
+		function work () {
+		var inA = document.getElementById("in_a");
+		var x = parseFloat (inA.value);
+		var inB = document.getElementById("in_b");
+		var y = parseFloat (inB.value);
+				
+		if (y<0){
+		var out = document.getElementById("out");	
+		out.innerHTML="Значение y должно быть неотрицательным";	
+		return;//Прекращение работы команды
+		}
+		if ((x+Math.sqrt(y))<0){
+		var out = document.getElementById("out");	
+		out.innerHTML="Подкоренное выражение должно быть неотрицательным";	
+		return;//Прекращение работы команды
+		}		
+		
+		
+		var result;
+		result= -5*(Math.sqrt(x+Math.sqrt(y)));
+		var out = document.getElementById("out");	
+		out.innerHTML=result.toFixed(4);		
+		}
+		
+		
+
+		</script>
+	</body>
+</html>

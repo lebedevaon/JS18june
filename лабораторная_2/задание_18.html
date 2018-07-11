@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="in_a"></input> 
+		<input onclick="work()" type="button" value="Считать">
+		
+		<div style="font-family:monospace;white-space:pre" id="out">
+		</div>
+		
+		<script>
+		function work () {
+		var inA = document.getElementById("in_a");
+		var X = parseFloat (inA.value);
+				
+		if ((61-X)<0){
+		var out = document.getElementById("out");	
+		out.innerHTML="Подкоренное выражение должно быть неотрицательным";	
+		return;//Прекращение работы команды
+		}	
+		
+		
+		var result;
+		result= 3*Math.sqrt(61-X);
+		var out = document.getElementById("out");	
+		out.innerHTML=result.toFixed(4);		
+		}
+		
+		
+
+		</script>
+	</body>
+</html>

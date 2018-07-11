@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="in_a"></input> 
+		<input id="in_b"></input> 
+		<input onclick="work()" type="button" value="Считать">
+		
+		<div style="font-family:monospace;white-space:pre" id="out">
+		</div>
+		
+		<script>
+		function work () {
+		var inA = document.getElementById("in_a");
+		var totalM = parseFloat (inA.value);
+		var inB = document.getElementById("in_b");
+		var partCM = parseFloat (inB.value);
+		var totalCM = totalM*100;		
+		var quantity;
+		quantity=Math.floor(totalCM/partCM);
+		//Math.floor - в меньшую сторону округление
+		//Math/ceil - в большую - - -
+		//Math.round - по матем.правилам - - -
+		var remainder;
+		//Остаток от деления totalCM на partCM
+		remainder = totalCM % partCM;
+						
+		if (partCM<=0){
+		var out = document.getElementById("out");	
+		out.innerHTML="Расход материала должен быть положительным";	
+		return;//Прекращение работы команды
+		}
+		if (totalM<=0){
+		var out = document.getElementById("out");	
+		out.innerHTML="Длина рулона должна быть положительна";	
+		return;//Прекращение работы команды
+		}		
+				
+		var result;
+		result= quantity + " шт" + " и " + remainder + " см";
+		var out = document.getElementById("out");	
+		out.innerHTML=result;		
+		}
+		
+		
+
+		</script>
+	</body>
+</html>
